@@ -1,7 +1,8 @@
-Music Similarity Search System
+**Music Similarity Search System**
 A learning project for building a music recommendation system using audio feature analysis and machine learning techniques.
 
-📋 Project Overview
+**
+Project Overview**
 This project explores how music similarity works by analyzing audio features from the Free Music Archive (FMA) dataset. It's designed as an educational journey through the concepts used by professional music recommendation systems like Spotify and Pandora.
 What This System Does
 
@@ -11,23 +12,16 @@ Learns which features matter most through data-driven analysis
 Allows you to customize similarity based on your preferences
 Goal: Extract and compare features from any music files (not just the dataset)
 
-What You'll Learn
-
-Audio signal processing and feature extraction
-Multi-dimensional similarity metrics
-Machine learning for recommendation systems
-The gap between technical and perceptual similarity
-Why production systems use hybrid approaches (audio + metadata + collaborative filtering)
 
 
-🎯 Current Status: Phase 1 Complete
+Current Status: Phase 1 Complete
 What's Working:
 
-✅ Data-driven feature importance analysis
-✅ Weighted similarity search with configurable features
-✅ Multiple preset configurations (minimal/balanced/comprehensive)
-✅ Manual weight customization
-✅ Perceptual validation through listening tests
+- Data-driven feature importance analysis
+- Weighted similarity search with configurable features
+- Multiple preset configurations (minimal/balanced/comprehensive)
+- Manual weight customization
+- Perceptual validation through listening tests
 
 Current Performance:
 
@@ -35,11 +29,6 @@ Current Performance:
 Cross-genre matching works (finds similar sound regardless of genre labels)
 Consistent results across configurations
 
-Key Learnings:
-
-Audio features capture perceptual/mood similarity, not necessarily musical structure
-Pure audio features have inherent limitations (don't capture melody, rhythm patterns, song structure)
-Professional systems combine audio features with metadata and collaborative filtering
 
 
 📁 Project Structure
@@ -63,7 +52,7 @@ music_similarity/
 │
 └── README.md                          # This file
 
-🚀 Getting Started
+**Getting Started**
 Prerequisites
 Python 3.8+ with the following libraries:
 bashpython -m pip install numpy pandas scikit-learn librosa matplotlib
@@ -96,7 +85,7 @@ bash   # Should see tracks.csv, features.csv, genres.csv
    # Should see folders 000-155
    dir fma_small
 
-🎵 How to Use
+**How to Use**
 Step 1: Analyze Feature Importance
 Determine which audio features are most informative:
 bashpython feature_importance_analyzer.py
@@ -223,40 +212,8 @@ Electronic   0.60      2
 Hip-Hop      0.40      2
 Rock         0.35      2
 
-🧠 Understanding the Features
-Audio Features Explained
-MFCC (Mel-Frequency Cepstral Coefficients)
 
-Captures: Timbre, texture, "color" of sound
-Example: Distinguishes piano from guitar
-Use when: You care about instrumentation similarity
-
-Chroma (CQT, STFT, CENS)
-
-Captures: Harmony, key, chord progressions
-Example: Songs in C major vs D minor
-Use when: You care about harmonic similarity
-
-Spectral Features (Centroid, Contrast, Rolloff, Bandwidth)
-
-Captures: Brightness, energy, frequency distribution
-Example: Bright/sparkly vs dark/warm sounds
-Use when: You care about sonic texture
-
-Temporal Features (Tempo, Beat, Rhythm)
-
-Captures: Speed, groove, rhythmic patterns
-Example: Fast dance track vs slow ballad
-Use when: You care about energy/movement
-
-Tonnetz
-
-Captures: Tonal relationships, harmonic space
-Example: How chords relate to each other
-Use when: You care about music theory relationships
-
-
-🎛️ Configuration Guide
+**Configuration Guide**
 Preset Configurations
 Minimal (1-2 features)
 
@@ -305,7 +262,7 @@ searcher.display_results(track_id=2, feature_set_name='my_config', n_similar=10)
 
 ---
 
-## 📊 Performance Expectations
+## Performance Expectations
 
 ### Realistic Results
 
@@ -321,18 +278,18 @@ searcher.display_results(track_id=2, feature_set_name='my_config', n_similar=10)
 
 ### What the System Does Well
 
-✅ **Cross-genre matching** - Finds similar sound regardless of genre labels  
-✅ **Timbre/texture similarity** - Songs with similar instrumentation  
-✅ **Mood/vibe matching** - Songs with similar energy/atmosphere  
-✅ **Harmonic similarity** - Songs in same key or with similar chords  
+- **Cross-genre matching** - Finds similar sound regardless of genre labels  
+- **Timbre/texture similarity** - Songs with similar instrumentation  
+- **Mood/vibe matching** - Songs with similar energy/atmosphere  
+- **Harmonic similarity** - Songs in same key or with similar chords  
 
 ### What the System Struggles With
 
-❌ **Melody similarity** - Can't detect similar tunes  
-❌ **Rhythmic patterns** - Doesn't capture groove or syncopation  
-❌ **Song structure** - Doesn't understand verse-chorus patterns  
-❌ **Genre conventions** - Might match across incompatible genres  
-❌ **Lyrical themes** - No text/semantic understanding  
+- **Melody similarity** - Can't detect similar tunes  
+- **Rhythmic patterns** - Doesn't capture groove or syncopation  
+- **Song structure** - Doesn't understand verse-chorus patterns  
+- **Genre conventions** - Might match across incompatible genres  
+- **Lyrical themes** - No text/semantic understanding  
 
 ---
 
@@ -373,7 +330,7 @@ Manhattan distance: Similar issues
 Mahalanobis distance: More complex, requires covariance matrix
 
 
-🚧 Current Limitations
+** Current Limitations**
 Known Issues
 
 Audio features alone aren't enough
@@ -411,7 +368,7 @@ Add metadata weighting (Phase 2)
 Provide user feedback (Phase 3)
 
 
-🗺️ Roadmap
+**Roadmap**
 ✅ Phase 1: Feature Weighting (Complete)
 
  Data-driven feature analysis
@@ -451,7 +408,7 @@ Evaluation metrics
 
 Estimated time: 3-5 hours
 
-📚 Learning Resources
+**Learning Resources**
 Concepts Covered
 Audio Signal Processing:
 
@@ -492,7 +449,7 @@ FMA: https://github.com/mdeff/fma
 Million Song Dataset: http://millionsongdataset.com/
 
 
-🤝 Contributing / Extending
+** Contributing / Extending**
 This is a personal learning project, but you can extend it:
 Ideas for Extensions
 
@@ -542,7 +499,7 @@ v3.0 - Phase 3: Feature extraction pipeline
 v4.0 - Phase 4: Learning and refinement
 
 
-🙏 Acknowledgments
+**Acknowledgments**
 Datasets:
 
 Free Music Archive (FMA) - Defferrard et al.
@@ -571,44 +528,3 @@ This is a solo learning project, but feel free to:
 Document your own learnings
 Extend the code for your purposes
 Share insights about what worked/didn't work
-
-
-🎓 Key Takeaways
-What I Learned
-
-Audio features have limitations
-
-Can't capture everything that makes music similar
-Perceptual ≠ Musical similarity
-Need hybrid approaches for production systems
-
-
-Data-driven vs perceptual validation
-
-Statistics don't always match human perception
-Both perspectives are valuable
-Iterative testing is essential
-
-
-Feature engineering matters
-
-Different features capture different aspects
-Weighting is crucial
-No single "best" configuration
-
-
-Realistic expectations
-
-4-5/10 similar is good for audio-only
-Professional systems use many signals
-Perfect similarity is impossible
-
-
-
-Next Steps
-
- Complete systematic testing (5-6 tracks)
- Decide on best configuration for my taste
- Move to Phase 2 (hybrid similarity)
- Build feature extraction pipeline (Phase 3)
- Apply to my own music library
