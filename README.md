@@ -1,8 +1,11 @@
 **Music Similarity Search System**
+
 A learning project for building a music recommendation system using audio feature analysis and machine learning techniques.
 
-**
-Project Overview**
+<br/>
+
+**Project Overview**
+
 This project explores how music similarity works by analyzing audio features from the Free Music Archive (FMA) dataset. It's designed as an educational journey through the concepts used by professional music recommendation systems like Spotify and Pandora.
 What This System Does
 
@@ -30,7 +33,7 @@ Cross-genre matching works (finds similar sound regardless of genre labels)
 Consistent results across configurations
 
 
-
+```
 📁 Project Structure
 music_similarity/
 ├── fma_metadata/                      # FMA dataset metadata
@@ -314,9 +317,9 @@ similarity involves: (features × weight) × (features × weight) = features² �
 So we use sqrt to get linear weighting:
 ```
 scaled = features × sqrt(weight)
-similarity involves: (features × sqrt(weight))² = features² × weight  ✓
-Similarity Metrics
-Cosine Similarity:
+similarity involves: (features × sqrt(weight))² = features² × weight 
+```
+
 
 Measures angle between feature vectors
 Range: -1 (opposite) to +1 (identical)
@@ -330,32 +333,30 @@ Manhattan distance: Similar issues
 Mahalanobis distance: More complex, requires covariance matrix
 
 
-** Current Limitations**
+**Current Limitations**
+
 Known Issues
 
-Audio features alone aren't enough
-
-Need metadata (genre, era) for better results
-Professional systems use collaborative filtering
+-Audio features alone aren't enough<br/>
+-Need metadata (genre, era) for better results<br/>
+-Professional systems use collaborative filtering<br/>
 
 
 Dataset limitations
 
-Only 8,000 tracks (limited diversity)
-30-second clips (not full songs)
-Pre-computed features (can't add custom ones easily)
-
-
-No melody/rhythm analysis
-
-Features don't capture these aspects well
-Would need specialized algorithms
+-Only 8,000 tracks (limited diversity)<br/>
+-30-second clips (not full songs)<br/>
+-Pre-computed features (can't add custom ones easily)<br/>
+<br/>
+No melody/rhythm analysis<br/>
+-Features don't capture these aspects well<br/>
+-Would need specialized algorithms<br/>
 
 
 Genre imbalance
 
-Some genres have more tracks than others
-Results may be biased toward common genres
+-Some genres have more tracks than others<br/>
+-Results may be biased toward common genres<br/>
 
 
 
@@ -369,27 +370,28 @@ Provide user feedback (Phase 3)
 
 
 **Roadmap**
-✅ Phase 1: Feature Weighting (Complete)
 
- Data-driven feature analysis
- Weighted similarity search
- Preset configurations
- Perceptual validation
- Systematic testing framework
+✅ Phase 1: Feature Weighting (Complete)<br/>
 
-🔄 Phase 2: Hybrid Similarity (Next)
+ Data-driven feature analysis<br/>
+ Weighted similarity search<br/>
+ Preset configurations<br/>
+ Perceptual validation<br/>
+ Systematic testing framework<br/>
+
+🔄 Phase 2: Hybrid Similarity (Next)<br/>
+
 Goal: Improve from 4-5/10 to 6-7/10
 Features to add:
 
-Genre compatibility scoring
-Era/decade similarity
-Artist similarity
-Weighted hybrid scoring
+Genre compatibility scoring<br/>
+Era/decade similarity<br/>
+Artist similarity<br/>
+Weighted hybrid scoring<br/>
 
-Estimated time: 4-6 hours
-🎯 Phase 3: Feature Extraction Pipeline (Main Goal)
-Goal: Apply to YOUR music files
-Features to build:
+🎯 Phase 3: Feature Extraction Pipeline (Main Goal)<br/>
+Goal: Apply to YOUR music files<br/>
+Features to build:<br/>
 
 Extract features from any MP3 using librosa
 Normalize features to match FMA dataset
@@ -397,7 +399,7 @@ Compare your songs to FMA database
 Compare your own songs to each other
 Build reusable CLI tool
 
-Estimated time: 4-5 hours
+
 🔮 Phase 4: Learning & Refinement (Optional)
 Features:
 
@@ -406,9 +408,10 @@ Online weight adjustment
 A/B testing framework
 Evaluation metrics
 
-Estimated time: 3-5 hours
+
 
 **Learning Resources**
+
 Concepts Covered
 Audio Signal Processing:
 
@@ -425,31 +428,37 @@ Similarity metrics
 Multi-criteria decision making
 Hybrid systems
 
+
+
 Music Information Retrieval:
+
 
 Audio feature extraction
 Music similarity
 Content-based recommendation
 Genre classification
 
+
+
 Further Reading
 Academic Papers:
 
-"The FMA: A Dataset for Music Analysis" (Defferrard et al., 2016)
-"Music Similarity Estimation" (Logan & Salomon, 2001)
+"The FMA: A Dataset for Music Analysis" (Defferrard et al., 2016)<br/>
+"Music Similarity Estimation" (Logan & Salomon, 2001)<br/>
 
-Libraries:
+Libraries:<br/>
 
-librosa documentation: https://librosa.org/
-scikit-learn user guide: https://scikit-learn.org/
+librosa documentation: https://librosa.org/<br/>
+scikit-learn user guide: https://scikit-learn.org/<br/>
 
-Datasets:
+Datasets:<br/>
 
-FMA: https://github.com/mdeff/fma
-Million Song Dataset: http://millionsongdataset.com/
+FMA: https://github.com/mdeff/fma<br/>
+Million Song Dataset: http://millionsongdataset.com/<br/>
 
 
-** Contributing / Extending**
+**Contributing / Extending**
+
 This is a personal learning project, but you can extend it:
 Ideas for Extensions
 
@@ -483,7 +492,8 @@ Similarity networks
 
 
 
-📝 Version History
+**Version History**
+
 v1.0 - Phase 1 Complete (Current)
 
 Feature importance analyzer with 4 analysis methods
@@ -500,6 +510,7 @@ v4.0 - Phase 4: Learning and refinement
 
 
 **Acknowledgments**
+
 Datasets:
 
 Free Music Archive (FMA) - Defferrard et al.
